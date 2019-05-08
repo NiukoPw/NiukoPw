@@ -1,5 +1,8 @@
 package com.michelezulian.example.niuko;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,48 +13,55 @@ import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
 
-
-
-public class MainActivity extends AppCompatActivity {
-
-    private TextView mTextMessage;
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            return false;
-        }
-    };
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
 
+        BottomNavigationView vNavigation =  findViewById(R.id.navigation);
+        vNavigation.setOnNavigationItemSelectedListener(this);
+
+        loadFragment(new ExploreFragment());
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.directory, menu);
         return true;
+    }
+
+    public boolean loadFragment (Fragment aFragment) {
+        if(aFragment != null) {
+            FragmentManager vManager = getFragmentManager();
+            FragmentTransaction vTransaction = vManager.beginTransaction();
+            vTransaction.replace(R.id.fragment_container, aFragment);
+            vTransaction.commit();
+
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Fragment vFragment = null;
+        switch (menuItem.getItemId()) {
+            case R.id.navigation_calendar: {
+                vFragment = new CalendarFragment();
+            } break;
+
+            case R.id.navigation_explore: {
+                vFragment = new ExploreFragment();
+            } break;
+
+            case R.id.navigation_user: {
+                vFragment = new UserFragment();
+            } break;
+        }
+
+        return loadFragment(vFragment);
     }
 }

@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="DeepChestnut">#ef4135</color>
-    <color name="Honeydew">#f1faee</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
 
+    <!-- MAIN COLORS -->
+    <color name="vermilion">#ef4135</color>
+    <color name="white">#ffffff</color>
+
+    <!-- SECONDARY COLORS -->
+    <color name="graniteGray">#626267</color>
+    <color name="darkLiver">#4c4c4c</color>
+    <color name="outerSpace">#4b4b4b</color>
+    <color name="roseMadder">#DF2935</color>
 </resources>
