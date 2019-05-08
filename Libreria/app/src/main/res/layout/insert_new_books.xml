@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/titolo"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_alignBottom="@+id/descrizione"
+        android:layout_marginBottom="71dp"
+        android:hint="Titolo"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/urlImg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/descrizione"
+        android:layout_marginBottom="-139dp"
+        android:hint="URL Immagine"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/descrizione"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="276dp"
+        android:hint="Descrizione"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/autore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="206dp"
+        android:hint="Autore"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="435dp"
+        android:fontFamily="casual"
+        android:text="AGGIUNGI UN NUOVO LIBRO"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="22dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="AGGIUNGI"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
