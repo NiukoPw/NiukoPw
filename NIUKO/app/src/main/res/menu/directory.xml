@@ -8,5 +8,4 @@
         android:icon="@drawable/userupactionbar"
         android:title="@string/action_menu_name"
         app:showAsAction="ifRoom"/>
-
 </menu>
