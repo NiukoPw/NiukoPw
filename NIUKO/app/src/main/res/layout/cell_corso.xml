@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cellLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corners"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cellCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/cellImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            tools:ignore="MissingConstraints"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/cellTextViewTitolo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Corso: Titolo"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/cellTextViewDurata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Durata: 32 ore"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/cellTextViewSede"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sede: Padova"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/roboto" />
+</LinearLayout>
+
