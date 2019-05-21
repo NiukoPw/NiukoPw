@@ -9,8 +9,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -20,20 +20,34 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        BottomNavigationView vNavigation =  findViewById(R.id.navigation);
+        // creo bottom navigation bar
+        BottomNavigationView vNavigation =  findViewById(R.id.mainBottomNavigation);
         vNavigation.setOnNavigationItemSelectedListener(this);
         vNavigation.setSelectedItemId(R.id.navigation_explore);
 
-        loadFragment(new ExploreFragment());
+
     }
 
+
+    /**
+     * Inserisce il menu all'interno della navbar
+     *
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.directory, menu);
         return true;
     }
 
+
+    /**
+     * Sostituisce il fragment attualmente presente nel container con quello passato
+     *
+     * @param aFragment
+     * @return
+     */
     public boolean loadFragment (Fragment aFragment) {
         if(aFragment != null) {
             FragmentManager vManager = getFragmentManager();
@@ -46,6 +60,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         return false;
     }
 
+
+    /**
+     * Chiamato quando viene premuto un elemento della navbar
+     * Prende l'id dell'elemento selezionato
+     * In base all'id attiva il fragment corrispondente
+     *
+     * @param menuItem
+     * @return
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment vFragment = null;
