@@ -1,4 +1,4 @@
-package com.michelezulian.example.niuko;
+package com.michelezulian.example.niuko.fragments;
 
 import android.app.Fragment;
 

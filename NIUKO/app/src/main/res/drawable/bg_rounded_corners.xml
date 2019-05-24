@@ -6,8 +6,8 @@
         android:bottom="10dp"
         android:top="10dp">
         <shape>
-            <solid android:color="@color/vermilion" />
-            <corners android:radius="10dp" />
+            <solid android:color="@color/columbiaBlue" />
+            <corners android:radius="12dp" />
             <padding
                 android:bottom="15dp"
                 android:left="10dp"

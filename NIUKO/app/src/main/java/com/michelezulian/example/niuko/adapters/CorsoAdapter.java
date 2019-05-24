@@ -1,4 +1,4 @@
-package com.michelezulian.example.niuko;
+package com.michelezulian.example.niuko.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.michelezulian.example.niuko.R;
+import com.michelezulian.example.niuko.data.Corso;
+
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 public class CorsoAdapter extends BaseAdapter {
     private static final String TITOLO = "Corso: ";
@@ -52,10 +54,10 @@ public class CorsoAdapter extends BaseAdapter {
             LayoutInflater vInflater = LayoutInflater.from(mContext);
             convertView = vInflater.inflate(R.layout.cell_corso, null);
 
-            TextView vTitolo = convertView.findViewById(R.id.cellTextViewTitolo);
-            TextView vSede = convertView.findViewById(R.id.cellTextViewSede);
-            TextView vDurata = convertView.findViewById(R.id.cellTextViewDurata);
-            ImageView vImmagine = convertView.findViewById(R.id.cellImageView);
+            TextView vTitolo = convertView.findViewById(R.id.corsoTextViewTitolo);
+            TextView vSede = convertView.findViewById(R.id.corsoTextViewSede);
+            TextView vDurata = convertView.findViewById(R.id.corsoTextViewDurata);
+            ImageView vImmagine = convertView.findViewById(R.id.corsoImageView);
 
 
             ViewHolder vHolder = new ViewHolder();

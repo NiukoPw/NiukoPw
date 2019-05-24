@@ -1,4 +1,4 @@
-package com.michelezulian.example.niuko;
+package com.michelezulian.example.niuko.data;
 
 import java.sql.Blob;
 

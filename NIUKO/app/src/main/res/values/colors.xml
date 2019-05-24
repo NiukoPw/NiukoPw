@@ -9,8 +9,8 @@
     <color name="white">#ffffff</color>
 
     <!-- SECONDARY COLORS -->
-    <color name="graniteGray">#626267</color>
-    <color name="darkLiver">#4c4c4c</color>
-    <color name="outerSpace">#4b4b4b</color>
+    <color name="columbiaBlue">#7198CC</color>
+    <color name="teaGreen">#30A76F</color>
     <color name="roseMadder">#DF2935</color>
+    <color name="lavenderBlush">#fcf2f2</color>
 </resources>

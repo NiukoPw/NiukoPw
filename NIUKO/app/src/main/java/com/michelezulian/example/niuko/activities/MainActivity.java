@@ -1,4 +1,4 @@
-package com.michelezulian.example.niuko;
+package com.michelezulian.example.niuko.activities;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -9,11 +9,19 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
-import java.util.ArrayList;
+import com.michelezulian.example.niuko.R;
+import com.michelezulian.example.niuko.fragments.CalendarFragment;
+import com.michelezulian.example.niuko.fragments.ExploreFragment;
+import com.michelezulian.example.niuko.fragments.NewsFragment;
+import com.michelezulian.example.niuko.fragments.UserFragment;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+    ImageView mIconautente;
+    BottomNavigationView mNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +29,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
 
         // creo bottom navigation bar
-        BottomNavigationView vNavigation =  findViewById(R.id.mainBottomNavigation);
-        vNavigation.setOnNavigationItemSelectedListener(this);
-        vNavigation.setSelectedItemId(R.id.navigation_explore);
+        mNavigation =  findViewById(R.id.mainBottomNavigation);
+        mNavigation.setOnNavigationItemSelectedListener(this);
+        mNavigation.setSelectedItemId(R.id.navigation_news);
+
+        // setto icona utente cliccabile
+        mIconautente = findViewById(R.id.mainUserImage);
+        mIconautente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new UserFragment());
+            }
+        });
     }
 
 
@@ -79,8 +96,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 vFragment = new ExploreFragment();
             } break;
 
-            case R.id.navigation_user: {
-                vFragment = new UserFragment();
+            case R.id.navigation_news: {
+                vFragment = new NewsFragment();
             } break;
         }
 
