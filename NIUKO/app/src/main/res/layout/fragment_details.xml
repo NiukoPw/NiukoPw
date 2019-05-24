@@ -7,32 +7,70 @@
     android:layout_height="match_parent">
 
     <ScrollView
-        android:id="@+id/detailScrollView"
+        android:id="@+id/corsoDetailScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/detailLinearLayout"
+            android:id="@+id/corsoDetailLinearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/detailImageView"
-                android:layout_width="wrap_content"
+                android:id="@+id/corsoDetailsImageView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <TextView
-                android:id="@+id/detailTextTitolo"
+                android:id="@+id/corsoDetailsTitolo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Corso: Titolo"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:layout_weight="1"
-                android:text="TextView" />
+                app:fontFamily="@font/roboto" />
+
+            <TextView
+                android:id="@+id/corsoDetailsSede"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Corso: Titolo"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                app:fontFamily="@font/roboto" />
+
+            <TextView
+                android:id="@+id/corsoDetailsDurata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Corso: Titolo"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                app:fontFamily="@font/roboto" />
+
+            <TextView
+                android:id="@+id/corsoDetailsDescrizione"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Corso: Titolo"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                app:fontFamily="@font/roboto" />
         </LinearLayout>
     </ScrollView>
-
 </android.support.constraint.ConstraintLayout>

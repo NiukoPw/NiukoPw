@@ -3,11 +3,10 @@ package com.michelezulian.example.niuko.data;
 import java.sql.Blob;
 
 public class Corso {
-    public String mNomeCorso, mSede, mImgUrl;
+    public String mNomeCorso, mSede, descrizione, mImgUrl;
     public int mId, mDurata;
     /*
     Blob img;
-    descrizione
     stato
     postiLiberi
      */

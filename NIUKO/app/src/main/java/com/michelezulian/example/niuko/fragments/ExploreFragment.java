@@ -1,10 +1,13 @@
 package com.michelezulian.example.niuko.fragments;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.michelezulian.example.niuko.data.Corso;
@@ -29,7 +32,6 @@ public class ExploreFragment extends Fragment {
 
         CorsoAdapter vAdapter = new CorsoAdapter(vCorsi, getActivity());
         mListView.setAdapter(vAdapter);
-        /*
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -39,7 +41,6 @@ public class ExploreFragment extends Fragment {
                 vTransaction.commit();
             }
         });
-        */
 
         return vView;
     }
