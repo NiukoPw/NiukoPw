@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
-import com.michelezulian.example.niuko.data.Corso;
 import com.michelezulian.example.niuko.data.Notizia;
 
 import java.util.ArrayList;
