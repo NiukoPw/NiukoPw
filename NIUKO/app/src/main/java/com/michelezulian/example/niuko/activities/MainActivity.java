@@ -103,4 +103,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         return loadFragment(vFragment);
     }
+
+    @Override
+    public void onBackPressed() {
+        if(!getFragmentManager().findFragmentById(R.id.fragment_container).getClass().equals(NewsFragment.class)) {
+            mNavigation.setSelectedItemId(R.id.navigation_news);
+            loadFragment(new NewsFragment());
+        } else {
+            finish();
+        }
+    }
 }

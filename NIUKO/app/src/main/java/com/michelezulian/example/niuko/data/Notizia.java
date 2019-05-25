@@ -4,10 +4,9 @@ import java.util.Date;
 
 public class Notizia {
     int mId;
-    String mTitolo, mDescrizione, mImgUrl;
-    Date mData;
+    String mImgUrl, mTitolo, mData, mDescrizione;
 
-    public Notizia(int mId, String mTitolo, String mDescrizione, String mImgUrl, Date mData) {
+    public Notizia(int mId, String mTitolo, String mDescrizione, String mImgUrl, String mData) {
         this.mId = mId;
         this.mTitolo = mTitolo;
         this.mDescrizione = mDescrizione;
@@ -47,11 +46,11 @@ public class Notizia {
         this.mImgUrl = mImgUrl;
     }
 
-    public Date getmData() {
+    public String getmData() {
         return mData;
     }
 
-    public void setmData(Date mData) {
+    public void setmData(String mData) {
         this.mData = mData;
     }
 }

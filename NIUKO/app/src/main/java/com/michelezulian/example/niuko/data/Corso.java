@@ -3,7 +3,7 @@ package com.michelezulian.example.niuko.data;
 import java.sql.Blob;
 
 public class Corso {
-    public String mNomeCorso, mSede, descrizione, mImgUrl;
+    public String mNomeCorso, mSede, mDescrizione, mImgUrl;
     public int mId, mDurata;
     /*
     Blob img;
@@ -11,9 +11,10 @@ public class Corso {
     postiLiberi
      */
 
-    public Corso(int aId, String aNomeCorso, String aSede, String aImgUrl, int aDurata) {
+    public Corso(int aId, String aNomeCorso, String aDescrizione, String aSede, String aImgUrl, int aDurata) {
         this.mId = aId;
         this.mNomeCorso = aNomeCorso;
+        this.mDescrizione = aDescrizione;
         this.mSede = aSede;
         this.mImgUrl = aImgUrl;
         this.mDurata = aDurata;
@@ -41,6 +42,14 @@ public class Corso {
 
     public void setmNomeCorso(String mNomeCorso) {
         this.mNomeCorso = mNomeCorso;
+    }
+
+    public String getmDescrizione() {
+        return mDescrizione;
+    }
+
+    public void setmDescrizione(String mDescrizione) {
+        this.mDescrizione = mDescrizione;
     }
 
     public String getmSede() {
