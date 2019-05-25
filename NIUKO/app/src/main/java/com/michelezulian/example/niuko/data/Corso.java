@@ -1,7 +1,5 @@
 package com.michelezulian.example.niuko.data;
 
-import java.sql.Blob;
-
 public class Corso {
     public String mNomeCorso, mSede, mDescrizione, mImgUrl;
     public int mId, mDurata;

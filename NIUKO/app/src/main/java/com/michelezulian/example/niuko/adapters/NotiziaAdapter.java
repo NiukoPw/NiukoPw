@@ -12,12 +12,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.data.Notizia;
-import com.michelezulian.example.niuko.data.StaticValues;
 
 import java.util.ArrayList;
-
-import static com.michelezulian.example.niuko.data.StaticValues.DATA;
-import static com.michelezulian.example.niuko.data.StaticValues.NOTIZIA;
 
 public class NotiziaAdapter extends BaseAdapter {
     ArrayList<Notizia> mNotizie;

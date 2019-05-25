@@ -1,7 +1,5 @@
 package com.michelezulian.example.niuko.data;
 
-import java.util.Date;
-
 public class Notizia {
     int mId;
     String mImgUrl, mTitolo, mData, mDescrizione;

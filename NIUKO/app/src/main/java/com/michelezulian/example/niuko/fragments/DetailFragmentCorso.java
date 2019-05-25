@@ -13,10 +13,7 @@ import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.data.Corso;
 
-import static com.michelezulian.example.niuko.data.StaticValues.CORSO;
-import static com.michelezulian.example.niuko.data.StaticValues.DURATA;
 import static com.michelezulian.example.niuko.data.StaticValues.ORE;
-import static com.michelezulian.example.niuko.data.StaticValues.SEDE;
 
 public class DetailFragmentCorso extends Fragment {
     Corso mCorso;

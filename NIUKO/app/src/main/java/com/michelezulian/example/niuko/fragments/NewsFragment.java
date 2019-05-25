@@ -17,7 +17,6 @@ import com.michelezulian.example.niuko.data.Notizia;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Locale;
 
 import static com.michelezulian.example.niuko.data.StaticValues.LOREM_IPSUM;
 

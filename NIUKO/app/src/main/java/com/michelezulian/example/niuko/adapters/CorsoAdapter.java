@@ -14,10 +14,7 @@ import com.michelezulian.example.niuko.data.Corso;
 
 import java.util.ArrayList;
 
-import static com.michelezulian.example.niuko.data.StaticValues.CORSO;
-import static com.michelezulian.example.niuko.data.StaticValues.DURATA;
 import static com.michelezulian.example.niuko.data.StaticValues.ORE;
-import static com.michelezulian.example.niuko.data.StaticValues.SEDE;
 
 public class CorsoAdapter extends BaseAdapter {
     ArrayList<Corso> mCorsi;

@@ -11,15 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
-import com.michelezulian.example.niuko.data.Corso;
 import com.michelezulian.example.niuko.data.Notizia;
-
-import static com.michelezulian.example.niuko.data.StaticValues.CORSO;
-import static com.michelezulian.example.niuko.data.StaticValues.DATA;
-import static com.michelezulian.example.niuko.data.StaticValues.DURATA;
-import static com.michelezulian.example.niuko.data.StaticValues.NOTIZIA;
-import static com.michelezulian.example.niuko.data.StaticValues.ORE;
-import static com.michelezulian.example.niuko.data.StaticValues.SEDE;
 
 public class DetailFragmentNotizia extends Fragment {
     Notizia mNotizia;
