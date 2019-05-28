@@ -11,4 +11,7 @@ public class StaticValues {
             "\n" +
             "In cursus mi eu leo congue, vel vehicula velit facilisis. Integer consectetur porttitor dolor. Ut non massa vestibulum, vulputate velit quis, posuere neque. Nam sem magna, euismod sed eleifend non, ultrices vehicula ipsum. In faucibus orci a tellus sagittis, id viverra metus congue. Aliquam dapibus porta dui, ut interdum ex mollis nec. Aenean fringilla a sapien a sodales. Vestibulum in ornare turpis. Vestibulum bibendum erat porttitor sagittis egestas. ";
 
+
+    public static final String URL_ALL_COURSES = "http://192.168.43.203:3002/courses/all_courses";
+    public static final String URL_ALL_USERS = "http://192.168.43.203:3002/users/all_users";
 }
