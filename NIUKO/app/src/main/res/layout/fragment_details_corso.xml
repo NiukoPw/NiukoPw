@@ -30,7 +30,9 @@
                 android:layout_height="wrap_content"
                 android:text="Corso: Titolo"
                 android:textSize="15sp"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:layout_weight="1"
                 app:fontFamily="@font/roboto" />
 
@@ -40,7 +42,9 @@
                 android:layout_height="wrap_content"
                 android:text="Corso: Titolo"
                 android:textSize="15sp"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:layout_weight="1"
                 app:fontFamily="@font/roboto" />
 
@@ -50,7 +54,9 @@
                 android:layout_height="wrap_content"
                 android:text="Corso: Titolo"
                 android:textSize="15sp"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:layout_weight="1"
                 app:fontFamily="@font/roboto" />
 
@@ -58,8 +64,13 @@
                 android:id="@+id/corsoDetailsPosti"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Corso: Titolo"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:layout_weight="1"
-                android:text="TextView" />
+                app:fontFamily="@font/roboto" />
 
             <TextView
                 android:id="@+id/corsoDetailsDescrizione"
@@ -67,7 +78,9 @@
                 android:layout_height="wrap_content"
                 android:text="Corso: Titolo"
                 android:textSize="15sp"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:layout_weight="1"
                 app:fontFamily="@font/roboto" />
         </LinearLayout>

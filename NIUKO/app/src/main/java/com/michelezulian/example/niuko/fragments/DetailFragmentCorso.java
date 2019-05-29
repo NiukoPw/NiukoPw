@@ -14,6 +14,7 @@ import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.data.Corso;
 
 import static com.michelezulian.example.niuko.data.StaticValues.ORE;
+import static com.michelezulian.example.niuko.data.StaticValues.POSTI;
 
 public class DetailFragmentCorso extends Fragment {
     Corso mCorso;
@@ -35,6 +36,7 @@ public class DetailFragmentCorso extends Fragment {
         TextView vTitolo = vView.findViewById(R.id.corsoDetailsTitolo);
         TextView vSede = vView.findViewById(R.id.corsoDetailsSede);
         TextView vDurata = vView.findViewById(R.id.corsoDetailsDurata);
+        TextView vPosti = vView.findViewById(R.id.corsoDetailsPosti);
         TextView vDescrizione = vView.findViewById(R.id.corsoDetailsDescrizione);
 
         Glide.with(getActivity())
@@ -45,6 +47,7 @@ public class DetailFragmentCorso extends Fragment {
         vTitolo.setText(mCorso.getmNomeCorso());
         vSede.setText(mCorso.getmSede());
         vDurata.setText(mCorso.getmDurata() + ORE);
+        vPosti.setText(POSTI + mCorso.getmPostiLiberi());
         vDescrizione.setText(mCorso.getmDescrizione());
 
         return vView;
