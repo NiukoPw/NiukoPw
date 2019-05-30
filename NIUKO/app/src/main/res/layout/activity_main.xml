@@ -71,12 +71,13 @@
                 app:fontFamily="@font/roboto"
                 tools:ignore="RtlCompat" />
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/mainUserImage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/bg_round"
                 app:srcCompat="@drawable/user_up_action_bar" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
