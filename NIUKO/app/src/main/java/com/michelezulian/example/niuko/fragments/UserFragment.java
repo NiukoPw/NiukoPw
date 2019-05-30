@@ -2,6 +2,8 @@ package com.michelezulian.example.niuko.fragments;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +24,7 @@ public class UserFragment extends Fragment {
     Utente mUtente;
     TextView mNomeUtente, mOreSvolte, mCertificati, mCorisAttivi;
     ImageView mBgPic, mProPic;
-    Button mToMyCourses, mToDetails;
+    Button mToMyCourses;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,7 +35,6 @@ public class UserFragment extends Fragment {
         mBgPic = vView.findViewById(R.id.userProfilePic);
         mProPic = vView.findViewById(R.id.userSmallProfilPic);
         mToMyCourses = vView.findViewById(R.id.userButtonMieiCorsi);
-        mToDetails = vView.findViewById(R.id.userButtonDettagli);
         mOreSvolte = vView.findViewById(R.id.userOreSvolte);
         mCorisAttivi= vView.findViewById(R.id.userCorsiAttivi);
         mCertificati = vView.findViewById(R.id.userCertificati);
@@ -51,6 +52,16 @@ public class UserFragment extends Fragment {
                 .load(PROPIC_URL)
                 .centerInside()
                 .into(mProPic);
+
+        mToMyCourses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager vManager = getFragmentManager();
+                FragmentTransaction vTransaction = vManager.beginTransaction();
+                vTransaction.replace(R.id.fragment_container, new UserCoursesFragment());
+                vTransaction.commit();
+            }
+        });
 
         return vView;
     }

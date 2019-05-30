@@ -36,7 +36,6 @@ public class ExploreFragment extends Fragment {
     ArrayList<Corso> mCorsi;
 
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View vView = inflater.inflate(R.layout.fragment_explore, container, false);
@@ -53,10 +52,11 @@ public class ExploreFragment extends Fragment {
                         try {
                             JSONArray vRecords = response.getJSONArray("records");
 
-                            for (int i = 0; i < vRecords.length(); i++) {
+                            /***** I = 0 DOPO AVER SISTEMATO DB *****/
+                            for (int i = 1; i < vRecords.length(); i++) {
                                 JSONObject vCurrent = vRecords.getJSONObject(i);
 
-                                if (vCurrent.getString("stato").equals(STATO_PUBBLICATO)) {
+                                //if (vCurrent.getString("stato").equals(STATO_PUBBLICATO)) {
                                     mCorsi.add(new Corso(
                                             0,
                                             vCurrent.getString("titolo"),
@@ -67,7 +67,7 @@ public class ExploreFragment extends Fragment {
                                             vCurrent.getInt("postiLiberi"),
                                             IMG_URL
                                     ));
-                                }
+                                //}
                             }
 
                             // aggiungo adapter alla listview
@@ -88,7 +88,7 @@ public class ExploreFragment extends Fragment {
 
 
         // eseguo richiesta
-        ConnectionSingleton.getInstance(getContext()).addToRequestQueue(vJsonRequest);
+        ConnectionSingleton.getInstance(getActivity()).addToRequestQueue(vJsonRequest);
 
         // quando viene cliccato un elemento della lista
         // passa al fragment coi dettagli dell'elemento
@@ -97,7 +97,7 @@ public class ExploreFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 FragmentManager vManager = getFragmentManager();
                 FragmentTransaction vTransaction = vManager.beginTransaction();
-                vTransaction.replace(R.id.fragment_container, new DetailFragmentCorso(mCorsi.get(position)));
+                vTransaction.replace(R.id.fragment_container, new CourseDetailFragment(mCorsi.get(position)));
                 vTransaction.commit();
             }
         });

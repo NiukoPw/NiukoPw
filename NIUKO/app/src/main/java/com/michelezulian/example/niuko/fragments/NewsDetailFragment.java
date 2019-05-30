@@ -13,15 +13,15 @@ import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.data.Notizia;
 
-public class DetailFragmentNotizia extends Fragment {
+public class NewsDetailFragment extends Fragment {
     Notizia mNotizia;
 
-    public DetailFragmentNotizia() {
+    public NewsDetailFragment() {
 
     }
 
     @SuppressLint("ValidFragment")
-    public DetailFragmentNotizia(Notizia aNotizia) {
+    public NewsDetailFragment(Notizia aNotizia) {
         mNotizia = aNotizia;
     }
 

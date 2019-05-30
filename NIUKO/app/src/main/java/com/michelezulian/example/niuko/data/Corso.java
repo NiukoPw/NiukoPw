@@ -1,8 +1,8 @@
 package com.michelezulian.example.niuko.data;
 
 public class Corso {
-    public String mNomeCorso, mSede, mDescrizione, mStato, mImgUrl;
-    public int mId, mDurata, mPostiLiberi;
+    private String mNomeCorso, mSede, mDescrizione, mStato, mImgUrl;
+    private int mId, mDurata, mPostiLiberi;
 
     public Corso(int mId, String mNomeCorso, String mSede, int mDurata, String mDescrizione, String mStato, int mPostiLiberi, String mImgUrl) {
         this.mNomeCorso = mNomeCorso;
