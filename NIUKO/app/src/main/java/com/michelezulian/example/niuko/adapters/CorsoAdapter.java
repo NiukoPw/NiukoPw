@@ -14,12 +14,9 @@ import com.michelezulian.example.niuko.data.Corso;
 
 import java.util.ArrayList;
 
-public class CorsoAdapter extends BaseAdapter {
-    private static final String TITOLO = "Corso: ";
-    private static final String DURATA = "Durata: ";
-    private static final String ORE = " ore";
-    private static final String SEDE = "Sede: ";
+import static com.michelezulian.example.niuko.data.StaticValues.ORE;
 
+public class CorsoAdapter extends BaseAdapter {
     ArrayList<Corso> mCorsi;
     Context mContext;
 
@@ -71,9 +68,9 @@ public class CorsoAdapter extends BaseAdapter {
 
         Corso vCorso = (Corso) getItem(position);
         ViewHolder vHolder = (ViewHolder) convertView.getTag();
-        vHolder.mTitolo.setText(TITOLO + vCorso.getmNomeCorso());
-        vHolder.mSede.setText(SEDE + vCorso.getmSede());
-        vHolder.mDurata.setText(DURATA + vCorso.getmDurata() + ORE);
+        vHolder.mTitolo.setText(vCorso.getmNomeCorso());
+        vHolder.mSede.setText(vCorso.getmSede());
+        vHolder.mDurata.setText(vCorso.getmDurata() + ORE);
         Glide.with(mContext)
                 .load(vCorso.getmImgUrl())
                 .centerInside()

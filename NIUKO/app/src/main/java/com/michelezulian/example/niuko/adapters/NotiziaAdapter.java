@@ -1,5 +1,6 @@
 package com.michelezulian.example.niuko.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,14 +11,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
-import com.michelezulian.example.niuko.data.Corso;
 import com.michelezulian.example.niuko.data.Notizia;
 
 import java.util.ArrayList;
 
 public class NotiziaAdapter extends BaseAdapter {
-    private static final String TITOLO = "Notizia: ";
-    private static final String DATA = "Data: ";
     ArrayList<Notizia> mNotizie;
     Context mContext;
 
@@ -46,6 +44,7 @@ public class NotiziaAdapter extends BaseAdapter {
         ImageView mImmagine;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -67,8 +66,8 @@ public class NotiziaAdapter extends BaseAdapter {
 
         Notizia vNotizia = (Notizia) getItem(position);
         ViewHolder vHolder = (ViewHolder) convertView.getTag();
-        vHolder.mTitolo.setText(TITOLO + vNotizia.getmTitolo());
-        vHolder.mData.setText(DATA + vNotizia.getmData());
+        vHolder.mTitolo.setText(vNotizia.getmTitolo());
+        vHolder.mData.setText(vNotizia.getmData());
         Glide.with(mContext)
                 .load(vNotizia.getmImgUrl())
                 .centerInside()
