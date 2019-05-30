@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+
+    <!-- MAIN COLORS -->
+    <color name="vermilion">#ef4135</color>
+    <color name="white">#ffffff</color>
+
+    <!-- SECONDARY COLORS -->
+    <color name="columbiaBlue">#7198CC</color>
+    <color name="teaGreen">#30A76F</color>
+    <color name="roseMadder">#DF2935</color>
+    <color name="lavenderBlush">#fcf2f2</color>
+</resources>
