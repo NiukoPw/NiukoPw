@@ -1,6 +1,6 @@
 GET :
-- visualizzare tutti corsi
-- tutte notizie
+- \\visualizzare tutti corsi
+- \\tutte notizie
 - tutti i corsi di un utente
 - lezioni dei corsi a cui un utente parteciperà
 - ore di lezione totali utente
