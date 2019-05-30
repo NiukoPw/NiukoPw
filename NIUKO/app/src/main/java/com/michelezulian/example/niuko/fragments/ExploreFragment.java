@@ -12,27 +12,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
-import com.michelezulian.example.niuko.data.ConnectionSingleton;
-import com.michelezulian.example.niuko.data.Corso;
-import com.michelezulian.example.niuko.adapters.CorsoAdapter;
 import com.michelezulian.example.niuko.R;
+import com.michelezulian.example.niuko.adapters.CorsoAdapter;
+import com.michelezulian.example.niuko.misc.ConnectionSingleton;
+import com.michelezulian.example.niuko.data.Corso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-import static com.michelezulian.example.niuko.data.StaticValues.IMG_URL;
-import static com.michelezulian.example.niuko.data.StaticValues.URL_ALL_COURSES;
+import static com.michelezulian.example.niuko.misc.StaticValues.IMG_URL;
+import static com.michelezulian.example.niuko.misc.StaticValues.STATO_PUBBLICATO;
+import static com.michelezulian.example.niuko.misc.StaticValues.URL_ALL_COURSES;
 
 public class ExploreFragment extends Fragment {
     ListView mListView;
@@ -59,17 +56,18 @@ public class ExploreFragment extends Fragment {
                             for (int i = 0; i < vRecords.length(); i++) {
                                 JSONObject vCurrent = vRecords.getJSONObject(i);
 
-                                mCorsi.add(new Corso(
-                                        0,
-                                        vCurrent.getString("titolo"),
-                                        vCurrent.getString("sede"),
-                                        vCurrent.getInt("durata"),
-                                        vCurrent.getString("descrizione"),
-                                        vCurrent.getString("stato"),
-                                        vCurrent.getInt("postiLiberi"),
-                                        IMG_URL
-                                        ));
-
+                                if (vCurrent.getString("stato").equals(STATO_PUBBLICATO)) {
+                                    mCorsi.add(new Corso(
+                                            0,
+                                            vCurrent.getString("titolo"),
+                                            vCurrent.getString("sede"),
+                                            vCurrent.getInt("durata"),
+                                            vCurrent.getString("descrizione"),
+                                            vCurrent.getString("stato"),
+                                            vCurrent.getInt("postiLiberi"),
+                                            IMG_URL
+                                    ));
+                                }
                             }
 
                             // aggiungo adapter alla listview

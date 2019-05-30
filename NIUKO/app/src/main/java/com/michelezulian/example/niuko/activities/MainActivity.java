@@ -11,22 +11,54 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
+import com.michelezulian.example.niuko.data.Utente;
 import com.michelezulian.example.niuko.fragments.CalendarFragment;
 import com.michelezulian.example.niuko.fragments.ExploreFragment;
 import com.michelezulian.example.niuko.fragments.NewsFragment;
 import com.michelezulian.example.niuko.fragments.UserFragment;
+import com.michelezulian.example.niuko.misc.FragmentListener;
+
+import static com.michelezulian.example.niuko.misc.StaticValues.IMG_URL;
+import static com.michelezulian.example.niuko.misc.StaticValues.PROPIC_URL;
 
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, FragmentListener {
     ImageView mIconautente;
     BottomNavigationView mNavigation;
+    TextView mNomeUtente;
+    Utente mUtente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // creo utente di prova
+        mUtente = new Utente(
+                "Matteo",
+                "Lorenzon",
+                "matteo1234poert9",
+                IMG_URL,
+                "MatteoLo",
+                "LorenzonM",
+                false,
+                5
+        );
+
+        // metto immagine profilo
+        mIconautente = findViewById(R.id.mainUserImage);
+        Glide.with(this)
+                .load(PROPIC_URL)
+                .centerInside()
+                .into(mIconautente);
+
+        // metto nome utente
+        mNomeUtente = findViewById(R.id.mainUserNameTextView);
+        mNomeUtente.setText(mUtente.getmNomeUtente());
 
         // creo bottom navigation bar
         mNavigation =  findViewById(R.id.mainBottomNavigation);
@@ -112,5 +144,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         } else {
             finish();
         }
+    }
+
+    @Override
+    public Utente getUtente() {
+        return mUtente;
     }
 }
