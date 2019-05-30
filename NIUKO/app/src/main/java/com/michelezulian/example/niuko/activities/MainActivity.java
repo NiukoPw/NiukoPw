@@ -17,8 +17,12 @@ import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.data.Utente;
 import com.michelezulian.example.niuko.fragments.CalendarFragment;
+import com.michelezulian.example.niuko.fragments.CourseDetailFragment;
 import com.michelezulian.example.niuko.fragments.ExploreFragment;
+import com.michelezulian.example.niuko.fragments.NewsDetailFragment;
 import com.michelezulian.example.niuko.fragments.NewsFragment;
+import com.michelezulian.example.niuko.fragments.UserCourseDetailFragment;
+import com.michelezulian.example.niuko.fragments.UserCoursesFragment;
 import com.michelezulian.example.niuko.fragments.UserFragment;
 import com.michelezulian.example.niuko.misc.FragmentListener;
 
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mNomeUtente.setText(mUtente.getmNomeUtente());
 
         // creo bottom navigation bar
-        mNavigation =  findViewById(R.id.mainBottomNavigation);
+        mNavigation = findViewById(R.id.mainBottomNavigation);
         mNavigation.setOnNavigationItemSelectedListener(this);
         mNavigation.setSelectedItemId(R.id.navigation_news);
 
@@ -95,8 +99,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
      * @param aFragment
      * @return
      */
-    public boolean loadFragment (Fragment aFragment) {
-        if(aFragment != null) {
+    public boolean loadFragment(Fragment aFragment) {
+        if (aFragment != null) {
             FragmentManager vManager = getFragmentManager();
             FragmentTransaction vTransaction = vManager.beginTransaction();
             vTransaction.replace(R.id.fragment_container, aFragment);
@@ -122,15 +126,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         switch (menuItem.getItemId()) {
             case R.id.navigation_calendar: {
                 vFragment = new CalendarFragment();
-            } break;
+            }
+            break;
 
             case R.id.navigation_explore: {
                 vFragment = new ExploreFragment();
-            } break;
+            }
+            break;
 
             case R.id.navigation_news: {
                 vFragment = new NewsFragment();
-            } break;
+            }
+            break;
         }
 
         return loadFragment(vFragment);
@@ -138,11 +145,37 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void onBackPressed() {
-        if(!getFragmentManager().findFragmentById(R.id.fragment_container).getClass().equals(NewsFragment.class)) {
+        Object vFragment = getFragmentManager().findFragmentById(R.id.fragment_container);
+        // in base al fragment in cui ci si trova, si torna ad un dato fragment
+
+        // visualizzazione notizie -> esci dall'app
+        if (vFragment instanceof NewsFragment) {
+            finish();
+        } else
+
+        // dettagli notizia, visualizzazione calendario, tutti i corsi, utente -> notizie
+        if (vFragment instanceof CalendarFragment ||
+            vFragment instanceof ExploreFragment ||
+            vFragment instanceof NewsDetailFragment ||
+            vFragment instanceof UserFragment) {
             mNavigation.setSelectedItemId(R.id.navigation_news);
             loadFragment(new NewsFragment());
-        } else {
-            finish();
+        } else
+
+        // dettagli corso -> lista corsi principale
+        if (vFragment instanceof CourseDetailFragment) {
+            mNavigation.setSelectedItemId(R.id.navigation_explore);
+            loadFragment(new ExploreFragment());
+        } else
+
+        // dettagli corso (da corsi dell'utente) -> corsi dell'utente
+        if (vFragment instanceof UserCourseDetailFragment) {
+            loadFragment(new UserCoursesFragment());
+        } else
+
+        // corsi dell'utente -> utente
+        if (vFragment instanceof UserCoursesFragment) {
+            loadFragment(new UserFragment());
         }
     }
 

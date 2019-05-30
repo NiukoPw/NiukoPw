@@ -1,8 +1,8 @@
 package com.michelezulian.example.niuko.data;
 
 public class Notizia {
-    int mId;
-    String mImgUrl, mTitolo, mData, mDescrizione;
+    private int mId;
+    private String mImgUrl, mTitolo, mData, mDescrizione;
 
     public Notizia(int mId, String mTitolo, String mDescrizione, String mImgUrl, String mData) {
         this.mId = mId;

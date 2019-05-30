@@ -34,6 +34,32 @@
         tools:ignore="RtlCompat"
         tools:layout_editor_absoluteX="10dp" />
 
+    <TextView
+        android:id="@+id/userNomeCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Nome Cognome"
+        android:textSize="18sp"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@+id/userProfilePic"
+        tools:ignore="RtlCompat"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/userOreTotali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Ore Totali: 108"
+        android:textSize="18sp"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@+id/userProfilePic"
+        tools:ignore="RtlCompat"
+        tools:layout_editor_absoluteX="10dp" />
+
     <Button
         android:id="@+id/userButtonMieiCorsi"
         android:layout_width="match_parent"
@@ -47,17 +73,4 @@
         app:layout_constraintTop_toBottomOf="@+id/userNomeUtente"
         tools:layout_editor_absoluteX="16dp" />
 
-    <Button
-        android:id="@+id/userButtonDettagli"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/vermilion"
-        android:text="Dettagli profilo"
-        android:textColor="@color/white"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userButtonMieiCorsi"
-        tools:layout_editor_absoluteX="10dp" />
 </LinearLayout>
