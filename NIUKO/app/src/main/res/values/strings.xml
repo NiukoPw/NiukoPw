@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NIUKO</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard"></string>
+    <string name="title_notifications">Notifications</string>
+    <string name="button_esplora"> Esplora </string>
+    <string name="button_calendario"> Calendario </string>
+    <string name="button_utente"> Utente </string>
+    <string name="action_menu_name"> User </string>
+    <string name="news">News</string>
+</resources>
