@@ -20,8 +20,8 @@ import static com.michelezulian.example.niuko.misc.StaticValues.PROPIC_URL;
 public class UserFragment extends Fragment {
     FragmentListener mListener;
     Utente mUtente;
-    TextView mNomeUtente;
-    ImageView mProPic;
+    TextView mNomeUtente, mOreSvolte, mCertificati, mCorisAttivi;
+    ImageView mBgPic, mProPic;
     Button mToMyCourses, mToDetails;
 
     @Override
@@ -30,11 +30,22 @@ public class UserFragment extends Fragment {
         mUtente = mListener.getUtente();
 
         mNomeUtente = vView.findViewById(R.id.userNomeUtente);
-        mProPic = vView.findViewById(R.id.userProfilePic);
+        mBgPic = vView.findViewById(R.id.userProfilePic);
+        mProPic = vView.findViewById(R.id.userSmallProfilPic);
         mToMyCourses = vView.findViewById(R.id.userButtonMieiCorsi);
         mToDetails = vView.findViewById(R.id.userButtonDettagli);
+        mOreSvolte = vView.findViewById(R.id.userOreSvolte);
+        mCorisAttivi= vView.findViewById(R.id.userCorsiAttivi);
+        mCertificati = vView.findViewById(R.id.userCertificati);
+
+
 
         mNomeUtente.setText(mUtente.getmNomeUtente());
+
+        Glide.with(this)
+                .load(PROPIC_URL)
+                .centerInside()
+                .into(mBgPic);
 
         Glide.with(this)
                 .load(PROPIC_URL)
