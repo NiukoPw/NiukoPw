@@ -13,15 +13,31 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.michelezulian.example.niuko.R;
+import com.michelezulian.example.niuko.data.Utente;
 import com.michelezulian.example.niuko.fragments.CalendarFragment;
 import com.michelezulian.example.niuko.fragments.ExploreFragment;
 import com.michelezulian.example.niuko.fragments.NewsFragment;
 import com.michelezulian.example.niuko.fragments.UserFragment;
+import com.michelezulian.example.niuko.misc.FragmentListener;
+
+import static com.michelezulian.example.niuko.misc.StaticValues.IMG_URL;
 
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, FragmentListener {
     ImageView mIconautente;
     BottomNavigationView mNavigation;
+
+    // creo utente di prova
+    Utente mUtente = new Utente(
+            "Matteo",
+            "Lorenzon",
+            "matteo1234poert9",
+            IMG_URL,
+            "MatteoLo",
+            "LorenzonM",
+            false,
+            5
+    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,5 +128,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         } else {
             finish();
         }
+    }
+
+    @Override
+    public Utente getUtente() {
+        return mUtente;
     }
 }

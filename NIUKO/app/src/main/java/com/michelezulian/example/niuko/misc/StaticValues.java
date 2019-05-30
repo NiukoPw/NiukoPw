@@ -1,4 +1,4 @@
-package com.michelezulian.example.niuko.data;
+package com.michelezulian.example.niuko.misc;
 
 public class StaticValues {
     public static final String NOTIZIA = "Notizia: ";
@@ -19,4 +19,7 @@ public class StaticValues {
     public static final String URL_ALL_COURSES = "http://192.168.43.203:3002/courses/all_courses";
     public static final String URL_ALL_NEWS = "http://192.168.43.203:3002/news/all_news";
     public static final String URL_ALL_USERS = "http://192.168.43.203:3002/users/all_users";
+
+    public static final String STATO_PUBBLICATO = "pubblicato";
+    public static final String STATO_NON_PUBBLICATO = "non pubblicato";
 }

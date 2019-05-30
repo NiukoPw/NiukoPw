@@ -1,4 +1,4 @@
-package com.michelezulian.example.niuko.data;
+package com.michelezulian.example.niuko.misc;
 
 import android.content.Context;
 

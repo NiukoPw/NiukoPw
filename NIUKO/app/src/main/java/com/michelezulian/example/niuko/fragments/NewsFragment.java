@@ -19,7 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.adapters.NotiziaAdapter;
-import com.michelezulian.example.niuko.data.ConnectionSingleton;
+import com.michelezulian.example.niuko.misc.ConnectionSingleton;
 import com.michelezulian.example.niuko.data.Notizia;
 
 import org.json.JSONArray;
@@ -27,8 +27,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import static com.michelezulian.example.niuko.data.StaticValues.IMG_URL;
-import static com.michelezulian.example.niuko.data.StaticValues.URL_ALL_COURSES;
+import static com.michelezulian.example.niuko.misc.StaticValues.IMG_URL;
+import static com.michelezulian.example.niuko.misc.StaticValues.URL_ALL_NEWS;
 
 public class NewsFragment extends Fragment {
     ListView mListView;
@@ -43,7 +43,7 @@ public class NewsFragment extends Fragment {
 
         // creo stringa di richiesta
         JsonObjectRequest vJsonRequest = new JsonObjectRequest
-                (Request.Method.GET, URL_ALL_COURSES, null, new Response.Listener<JSONObject>() {
+                (Request.Method.GET, URL_ALL_NEWS, null, new Response.Listener<JSONObject>() {
 
                     @Override
                     public void onResponse(JSONObject response) {
