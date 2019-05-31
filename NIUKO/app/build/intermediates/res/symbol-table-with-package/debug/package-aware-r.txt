@@ -25,6 +25,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -147,6 +151,10 @@ attr chipStartPadding
 attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -608,7 +616,7 @@ color cardview_shadow_start_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
-color darkLiver
+color columbiaBlue
 color design_bottom_navigation_shadow_color
 color design_default_color_primary
 color design_default_color_primary_dark
@@ -630,9 +638,9 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
-color graniteGray
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lavenderBlush
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -674,7 +682,6 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
-color outerSpace
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -696,6 +703,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color teaGreen
 color tooltip_background_dark
 color tooltip_background_light
 color vermilion
@@ -1007,8 +1015,12 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_faded_red
+drawable bg_round_columbia
+drawable bg_round_lavender
+drawable bg_round_white
 drawable bottom_bar_highlight
-drawable calendar
+drawable button_ripple_red
 drawable classroom
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1016,15 +1028,18 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
-drawable esplora
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable icon_calendar
+drawable icon_esplora
+drawable icon_news
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable niuko_logo_bianco
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1038,13 +1053,12 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable paper_plane
-drawable settings
 drawable successful
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-drawable user
 drawable users
 drawable userupactionbar
+font roboto
 id ALT
 id CTRL
 id FUNCTION
@@ -1083,6 +1097,9 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id calendarCalendarView
+id calendarListView
+id calendarScrollView
 id cancel_action
 id center
 id center_horizontal
@@ -1097,6 +1114,21 @@ id container
 id content
 id contentPanel
 id coordinator
+id corsoCardView
+id corsoDetailLinearLayout
+id corsoDetailScrollView
+id corsoDetailsDescrizione
+id corsoDetailsDurata
+id corsoDetailsImageView
+id corsoDetailsIscriviti
+id corsoDetailsPosti
+id corsoDetailsSede
+id corsoDetailsTitolo
+id corsoImageView
+id corsoLinearLayout
+id corsoTextViewDurata
+id corsoTextViewSede
+id corsoTextViewTitolo
 id custom
 id customPanel
 id decor_content_parent
@@ -1117,6 +1149,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id exploreListView
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1125,6 +1158,7 @@ id fixed
 id forever
 id fragment_container
 id ghost_view
+id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
@@ -1144,9 +1178,19 @@ id largeLabel
 id left
 id line1
 id line3
+id linearLayout2
 id listMode
 id list_item
-id listview
+id loginButton
+id loginFrameLayout
+id loginPassword
+id loginSignUpLink
+id loginTitleImage
+id loginUsername
+id mainBottomNavigation
+id mainTopToolbar
+id mainUserImage
+id mainUserNameTextView
 id masked
 id media_actions
 id message
@@ -1155,17 +1199,28 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id navigation
 id navigation_calendar
 id navigation_explore
 id navigation_header_container
-id navigation_user
+id navigation_news
 id never
 id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notiziaCardView
+id notiziaDetailLinearLayout
+id notiziaDetailScrollView
+id notiziaDetailsData
+id notiziaDetailsDescrizione
+id notiziaDetailsImageView
+id notiziaDetailsTitolo
+id notiziaImageView
+id notiziaLinearLayout
+id notiziaListView
+id notiziaTextViewData
+id notiziaTextViewTitolo
 id outline
 id packed
 id parallax
@@ -1177,6 +1232,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id relativeLayout
 id right
 id right_icon
 id right_side
@@ -1205,6 +1261,13 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signupButton
+id signupCognome
+id signupNome
+id signupPassword
+id signupPasswordCheck
+id signupToLogin
+id signupUsername
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1233,8 +1296,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView2
-id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1255,6 +1316,21 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userButtonLogout
+id userButtonMieiCorsi
+id userCertificati
+id userCorsiAttivi
+id userCourseDetailLinearLayout
+id userCourseDetailsDescrizione
+id userCourseDetailsDurata
+id userCourseDetailsImageView
+id userCourseDetailsSede
+id userCourseDetailsTitolo
+id userNomeUtente
+id userOreSvolte
+id userProfilePic
+id userSmallProfilPic
+id usercoursesListView
 id view_offset_helper
 id visible
 id withText
@@ -1307,7 +1383,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
+layout cell_corso
+layout cell_lezione
+layout cell_notizia
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1323,8 +1403,15 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_calendar
+layout fragment_details_corso
+layout fragment_details_notizia
 layout fragment_explore
+layout fragment_login
+layout fragment_notizia
+layout fragment_signup
 layout fragment_user
+layout fragment_user_course_detail
+layout fragment_user_courses
 layout listview_user_fragment
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1351,6 +1438,7 @@ menu directory
 menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap logo_niuko_round
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1403,6 +1491,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string mtrl_chip_close_icon_content_description
+string news
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -1939,6 +2028,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipStartPadding chipStrokeColor chipStrokeWidth closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible hideMotionSpec iconEndPadding iconStartPadding rippleColor showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha

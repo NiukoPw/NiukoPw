@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -67,7 +68,8 @@ public class NewsFragment extends Fragment {
                             NotiziaAdapter vAdapter = new NotiziaAdapter(mNotizie, getActivity());
                             mListView.setAdapter(vAdapter);
                         } catch (Exception e) {
-                            e.printStackTrace();
+                            Log.d("risposta", "Errore: " + e.toString());
+                            Toast.makeText(getActivity(), "Oops! C'è stato un errore", Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -75,7 +77,8 @@ public class NewsFragment extends Fragment {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace();
+                        Log.d("risposta", "Errore: " + error.toString());
+                        Toast.makeText(getActivity(), "Oops! C'è stato un errore", Toast.LENGTH_SHORT).show();
                     }
                 });
 

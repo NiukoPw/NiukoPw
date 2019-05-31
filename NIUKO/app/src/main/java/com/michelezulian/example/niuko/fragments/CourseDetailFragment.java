@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -83,14 +84,16 @@ public class CourseDetailFragment extends Fragment {
                             new Response.ErrorListener() {
                                 @Override
                                 public void onErrorResponse(VolleyError error) {
-                                    Log.d("risposta", "Errore: " + error.getMessage());
+                                    Log.d("risposta", "Errore: " + error.toString());
+                                    Toast.makeText(getActivity(), "Oops! C'è stato un errore", Toast.LENGTH_SHORT).show();
                                 }
                             }
                     );
 
                     ConnectionSingleton.getInstance(getActivity()).addToRequestQueue(vRequest);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    Log.d("risposta", "Errore: " + e.toString());
+                    Toast.makeText(getActivity(), "Oops! C'è stato un errore", Toast.LENGTH_SHORT).show();
                 }
             }
         });

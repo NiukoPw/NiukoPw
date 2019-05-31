@@ -3,20 +3,40 @@ package com.michelezulian.example.niuko.activities;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.SharedElementCallback;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.fragments.LoginFragment;
+
+import static com.michelezulian.example.niuko.misc.StaticValues.ID_KEY;
 
 public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        Log.d("risposta", "Login R25");
 
-        loadFragment(new LoginFragment());
+        SharedPreferences vSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        Log.d("risposta", "login R25 shared id: " + vSharedPref.getInt(ID_KEY, -1));
+
+        if(vSharedPref.getInt(ID_KEY, -1) >= 0) {
+            Log.d("risposta", "login passato if ");
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        } else {
+            Log.d("risposta", "login passato else ");
+            setContentView(R.layout.activity_login);
+
+            loadFragment(new LoginFragment());
+        }
     }
 
     public void loadFragment(Fragment aFragment) {

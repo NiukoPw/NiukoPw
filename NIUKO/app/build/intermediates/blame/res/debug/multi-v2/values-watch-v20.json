@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\matte\\Desktop\\NiukoProjectGIT\\NiukoPw\\NIUKO\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Users\\matte\\OneDrive\\Desktop\\progetto_niuko\\NiukoPw\\NIUKO\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\matte\\.gradle\\caches\\transforms-2\\files-2.1\\54713fff876c8ea474cee1142d2188f1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\matte\\.gradle\\caches\\transforms-2\\files-2.1\\383b3acedd50566abf75084d22d92b0d\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

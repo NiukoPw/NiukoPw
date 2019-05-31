@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\matte\\Desktop\\NiukoProjectGIT\\NiukoPw\\NIUKO\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\matte\\OneDrive\\Desktop\\progetto_niuko\\NiukoPw\\NIUKO\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\matte\\.gradle\\caches\\transforms-2\\files-2.1\\54713fff876c8ea474cee1142d2188f1\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\matte\\.gradle\\caches\\transforms-2\\files-2.1\\383b3acedd50566abf75084d22d92b0d\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\matte\\.gradle\\caches\\transforms-2\\files-2.1\\2924bb599114e1b7e4db166a41ae2d6f\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\matte\\.gradle\\caches\\transforms-2\\files-2.1\\23512718699cbe38cf4d34738966e3aa\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
