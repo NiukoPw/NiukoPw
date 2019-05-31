@@ -26,8 +26,24 @@ router.get('/all_courses', function(req, res, next) {
     });
 });
 
-router.post('/join', function(req, res, next){
 
-})
+router.post('/join', function(req, res, next){
+  data = {
+    $idUtente: req.body.idUtente,
+    $idCorso: req.body.idCorso
+  };
+  db.run("INSERT INTO UTENTECORSO_REL VALUES ($idUtente,$idCorso)", data, function(err, rows) {
+    if (err) {
+      return console.error(err);
+      res.json({
+        iscrizione : false
+      });
+    };
+  });
+
+  res.json({
+    iscrizione : true
+  });
+});
 
 module.exports = router;
