@@ -1,9 +1,9 @@
 package com.michelezulian.example.niuko.data;
 
 public class Utente {
-    String mNome, mCognome, mCodiceFiscale, mImgUrl, mNomeUtente, mPassword;
-    boolean mAmministratore;
-    int mId;
+    private String mNome, mCognome, mCodiceFiscale, mImgUrl, mNomeUtente, mPassword;
+    private boolean mAmministratore;
+    private int mId;
 
     public Utente(String mNome, String mCognome, String mCodiceFiscale, String mImgUrl, String mNomeUtente, String mPassword, boolean mAmministratore, int mId) {
         this.mNome = mNome;

@@ -16,15 +16,15 @@ import com.michelezulian.example.niuko.data.Corso;
 import static com.michelezulian.example.niuko.misc.StaticValues.ORE;
 import static com.michelezulian.example.niuko.misc.StaticValues.POSTI;
 
-public class DetailFragmentCorso extends Fragment {
+public class CourseDetailFragment extends Fragment {
     Corso mCorso;
 
-    public DetailFragmentCorso() {
+    public CourseDetailFragment() {
 
     }
 
     @SuppressLint("ValidFragment")
-    public DetailFragmentCorso(Corso aCorso) {
+    public CourseDetailFragment(Corso aCorso) {
         mCorso = aCorso;
     }
 
