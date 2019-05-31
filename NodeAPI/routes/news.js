@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../db');
+var bodyParser = require("body-parser");
 
 // visualizza tutte le notizie in json
 router.get('/all_news', function(req, res, next) {
@@ -10,7 +11,7 @@ router.get('/all_news', function(req, res, next) {
             return console.error(err);
         }
         news.push({
-            id: row.id,
+            id: row.ID,
             titolo: row.titolo,
             descrizione: row.descrizione,
             data: row.data
