@@ -10,7 +10,7 @@ router.get('/all_news', function(req, res, next) {
             return console.error(err);
         }
         news.push({
-            id: row.id,
+            id: row.ID,
             titolo: row.titolo,
             descrizione: row.descrizione,
             data: row.data

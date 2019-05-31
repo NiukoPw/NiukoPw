@@ -58,7 +58,7 @@ public class ExploreFragment extends Fragment {
 
                                 //if (vCurrent.getString("stato").equals(STATO_PUBBLICATO)) {
                                     mCorsi.add(new Corso(
-                                            0,
+                                            vCurrent.getInt("id"),
                                             vCurrent.getString("titolo"),
                                             vCurrent.getString("sede"),
                                             vCurrent.getInt("durata"),

@@ -66,7 +66,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/user_line_background"
+            android:background="@drawable/bg_round_lavender"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
                     android:layout_width="70dp"
                     android:layout_height="4dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/user_line_background" />
+                    android:background="@drawable/bg_round_lavender" />
             </LinearLayout>
 
             <LinearLayout
@@ -147,7 +147,7 @@
                     android:layout_width="70dp"
                     android:layout_height="4dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/user_line_background" />
+                    android:background="@drawable/bg_round_lavender" />
             </LinearLayout>
 
             <LinearLayout
@@ -179,7 +179,7 @@
                     android:layout_width="70dp"
                     android:layout_height="4dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/user_line_background" />
+                    android:background="@drawable/bg_round_lavender" />
             </LinearLayout>
 
         </LinearLayout>
@@ -192,7 +192,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/user_button_imieicorsi_background"
+            android:background="@drawable/bg_round_white"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="I M I E I C O R S I"
             android:textColor="@color/vermilion"

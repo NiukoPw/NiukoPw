@@ -10,7 +10,7 @@ router.get('/all_users', function(req, res, next) {
             return console.error(err);
         }
         users.push({
-            id: row.id,
+            id: row.ID,
             nome: row.nome,
             cognome: row.cognome,
             cf: row.CF,

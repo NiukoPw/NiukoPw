@@ -54,7 +54,7 @@ public class NewsFragment extends Fragment {
                                 JSONObject vCurrent = vRecords.getJSONObject(i);
 
                                 mNotizie.add(new Notizia(
-                                        0,
+                                        vCurrent.getInt("id"),
                                         vCurrent.getString("titolo"),
                                         vCurrent.getString("descrizione"),
                                         IMG_URL,

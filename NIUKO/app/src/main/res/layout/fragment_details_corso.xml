@@ -9,7 +9,9 @@
     <ScrollView
         android:id="@+id/corsoDetailScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
 
         <LinearLayout
             android:id="@+id/corsoDetailLinearLayout"
@@ -21,8 +23,7 @@
                 android:id="@+id/corsoDetailsImageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/corsoDetailsTitolo"
@@ -34,6 +35,7 @@
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 app:fontFamily="@font/roboto" />
 
             <TextView
@@ -46,6 +48,7 @@
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 app:fontFamily="@font/roboto" />
 
             <TextView
@@ -58,6 +61,7 @@
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 app:fontFamily="@font/roboto" />
 
             <TextView
@@ -70,6 +74,7 @@
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 app:fontFamily="@font/roboto" />
 
             <TextView
@@ -82,7 +87,19 @@
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 app:fontFamily="@font/roboto" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/corsoDetailsIscriviti"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:text="Iscriviti"
+                android:textColor="@color/white"
+                android:background="@drawable/button_ripple_red"/>
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

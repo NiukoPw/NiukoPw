@@ -10,7 +10,7 @@ router.get('/all_courses', function(req, res, next) {
             return console.error(err);
         }
         courses.push({
-            id: row.id,
+            id: row.ID,
             titolo: row.titolo,
             sede: row.sede,
             durata: row.durata,

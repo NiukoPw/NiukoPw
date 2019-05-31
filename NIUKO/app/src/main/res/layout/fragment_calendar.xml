@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:accessibilityHeading="true"
-            android:background="@drawable/bg_rounded_corners"
+            android:background="@drawable/bg_round_columbia"
             android:backgroundTint="@color/lavenderBlush"
             />
 

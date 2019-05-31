@@ -1,17 +1,15 @@
 package com.michelezulian.example.niuko.data;
 
 public class Utente {
-    private String mNome, mCognome, mCodiceFiscale, mImgUrl, mNomeUtente, mPassword;
+    private String mNome, mCognome, mImgUrl, mNomeUtente;
     private boolean mAmministratore;
     private int mId;
 
-    public Utente(String mNome, String mCognome, String mCodiceFiscale, String mImgUrl, String mNomeUtente, String mPassword, boolean mAmministratore, int mId) {
+    public Utente(String mNome, String mCognome, String mImgUrl, String mNomeUtente, boolean mAmministratore, int mId) {
         this.mNome = mNome;
         this.mCognome = mCognome;
-        this.mCodiceFiscale = mCodiceFiscale;
         this.mImgUrl = mImgUrl;
         this.mNomeUtente = mNomeUtente;
-        this.mPassword = mPassword;
         this.mAmministratore = mAmministratore;
         this.mId = mId;
     }
@@ -24,20 +22,12 @@ public class Utente {
         return mCognome;
     }
 
-    public String getmCodiceFiscale() {
-        return mCodiceFiscale;
-    }
-
     public String getmImgUrl() {
         return mImgUrl;
     }
 
     public String getmNomeUtente() {
         return mNomeUtente;
-    }
-
-    public String getmPassword() {
-        return mPassword;
     }
 
     public boolean ismAmministratore() {

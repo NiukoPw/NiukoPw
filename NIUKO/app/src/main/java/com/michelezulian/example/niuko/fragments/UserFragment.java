@@ -40,8 +40,8 @@ public class UserFragment extends Fragment {
         mCertificati = vView.findViewById(R.id.userCertificati);
 
 
-
         mNomeUtente.setText(mUtente.getmNomeUtente());
+        //mOreSvolte.setText(mUtente.getmOreSvolte());
 
         Glide.with(this)
                 .load(PROPIC_URL)

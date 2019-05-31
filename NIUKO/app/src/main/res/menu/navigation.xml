@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_calendar"
-        android:icon="@drawable/calendar"
+        android:icon="@drawable/icon_calendar"
         android:title="@string/button_calendario" />
 
     <item
         android:id="@+id/navigation_news"
-        android:icon="@drawable/news"
+        android:icon="@drawable/icon_news"
         android:title="@string/news" />
 
     <item
         android:id="@+id/navigation_explore"
-        android:icon="@drawable/esplora"
+        android:icon="@drawable/icon_esplora"
         android:title="@string/button_esplora" />
 
 </menu>

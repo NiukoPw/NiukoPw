@@ -12,10 +12,15 @@ public class StaticValues {
     public static final String IMG_URL ="https://www.neweuropelingue.it/wp-content/uploads/2018/08/corsi-francese-vomero.jpg";
     public static final String PROPIC_URL ="https://b2c-media.marinarinaldi.com/sys-master/images/h0c/h2a/9067611488286/Lookbook_PSbyMR_SS19.jpg";
 
-    public static final String URL_ALL_COURSES = "http://192.168.43.203:3002/courses/all_courses";
-    public static final String URL_ALL_NEWS = "http://192.168.43.203:3002/news/all_news";
-    public static final String URL_USER_COURSES = "http://192.168.43.203:3002/users/corsi_utente";
-    public static final String URL_ALL_USERS = "http://192.168.43.203:3002/users/all_users";
+    public static final String IP_LORENZON = "192.168.43.203";
+    public static final String IP_POLATO = "192.168.43.240";
+
+    public static final String URL_ALL_COURSES = "http://" + IP_POLATO + ":3002/courses/all_courses";
+    public static final String JOIN_COURSE = "http://" + IP_POLATO + ":3002/courses/join";
+    public static final String URL_ALL_NEWS = "http://" + IP_POLATO + ":3002/icon_news/all_news";
+    public static final String URL_USER_COURSES = "http://" + IP_POLATO + ":3002/users/corsi_utente";
+    public static final String URL_LOGIN = "http://" + IP_POLATO + ":3002/users/login";
+    public static final String URL_SIGNUP = "http://" + IP_POLATO + ":3002/users/signup";
 
     public static final String STATO_PUBBLICATO = "pubblicato";
     public static final String STATO_NON_PUBBLICATO = "non pubblicato";

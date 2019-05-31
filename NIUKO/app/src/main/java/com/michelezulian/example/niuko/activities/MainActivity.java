@@ -43,14 +43,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         // creo utente di prova
         mUtente = new Utente(
-                "Matteo",
-                "Lorenzon",
-                "matteo1234poert9",
+                "Zayed",
+                "Ahmed",
                 IMG_URL,
-                "MatteoLo",
-                "LorenzonM",
+                "aaa",
                 false,
-                5
+                1
         );
 
         // metto immagine profilo
