@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../db');
+var bodyParser = require("body-parser");
 
 // visualizza tutti gli utenti in json
 router.get('/all_users', function(req, res, next) {
@@ -86,8 +87,24 @@ router.get('/orelezione_utente', function(req, res, next) {
     });
 });
 
-router.get('/inserisci_utente', function(req, res, next) {
-  db.run('INSERT INTO utente VALUES ("andrea", "rossi", "easdfrcvvfdswwef", 0, 10, null)');
-});
+router.post('/login', function(req, res, next){
+  data = {
+          $username: req.body.username,
+          $password: req.body.password
+      };
+      db.run("SELECT nomeUtente, password FROM UTENTE WHERE nomeUtente = $username AND password = $password", data, function(err, row) {
+          if (row.length == 0) {
+            res.json({
+              errore : err,
+              chiamata : false
+            });
+            return console.error(err);
+          }
+          res.json({
+            errore : err,
+            chiamata : true
+          });
+      });
+  });
 
 module.exports = router;

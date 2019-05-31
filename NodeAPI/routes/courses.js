@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../db');
+var bodyParser = require("body-parser");
 
 // visualizza tutti i corsi in json
 router.get('/all_courses', function(req, res, next) {
@@ -24,5 +25,9 @@ router.get('/all_courses', function(req, res, next) {
         });
     });
 });
+
+router.post('/join', function(req, res, next){
+
+})
 
 module.exports = router;

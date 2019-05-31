@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../db');
+var bodyParser = require("body-parser");
 
 // visualizza tutte le notizie in json
 router.get('/all_news', function(req, res, next) {
