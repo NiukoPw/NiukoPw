@@ -2,10 +2,9 @@ package com.michelezulian.example.niuko.data;
 
 public class Utente {
     private String mNome, mCognome, mImgUrl, mNomeUtente;
-    private boolean mAmministratore;
-    private int mId;
+    private int mAmministratore, mId;
 
-    public Utente(String mNome, String mCognome, String mImgUrl, String mNomeUtente, boolean mAmministratore, int mId) {
+    public Utente(String mNome, String mCognome, String mImgUrl, String mNomeUtente, int mAmministratore, int mId) {
         this.mNome = mNome;
         this.mCognome = mCognome;
         this.mImgUrl = mImgUrl;
@@ -30,7 +29,7 @@ public class Utente {
         return mNomeUtente;
     }
 
-    public boolean ismAmministratore() {
+    public int getmAmministratore() {
         return mAmministratore;
     }
 

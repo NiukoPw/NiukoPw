@@ -40,7 +40,6 @@ public class LoginFragment extends Fragment {
     EditText mUsername, mPassword;
     Button mGoLogin;
     TextView mToSignUp;
-    Utente mUtente;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -22,19 +22,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("risposta", "Login R25");
 
         SharedPreferences vSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Log.d("risposta", "login R25 shared id: " + vSharedPref.getInt(ID_KEY, -1));
 
         if(vSharedPref.getInt(ID_KEY, -1) >= 0) {
-            Log.d("risposta", "login passato if ");
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             finish();
         } else {
-            Log.d("risposta", "login passato else ");
             setContentView(R.layout.activity_login);
-
             loadFragment(new LoginFragment());
         }
     }

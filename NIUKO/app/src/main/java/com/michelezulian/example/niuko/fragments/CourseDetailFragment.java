@@ -28,7 +28,9 @@ import org.json.JSONObject;
 
 import static com.michelezulian.example.niuko.misc.StaticValues.ORE;
 import static com.michelezulian.example.niuko.misc.StaticValues.POSTI;
+import static com.michelezulian.example.niuko.misc.StaticValues.URL_JOIN_COURSE;
 import static com.michelezulian.example.niuko.misc.StaticValues.URL_LOGIN;
+import static com.michelezulian.example.niuko.misc.StaticValues.URL_USER_COURSES;
 
 public class CourseDetailFragment extends Fragment {
     Corso mCorso;
@@ -74,7 +76,7 @@ public class CourseDetailFragment extends Fragment {
                     vParameters.put("idCorso", mCorso.getmId());
 
                     JsonObjectRequest vRequest = new JsonObjectRequest(
-                            Request.Method.POST, URL_LOGIN, vParameters,
+                            Request.Method.POST, URL_JOIN_COURSE, vParameters,
                             new Response.Listener<JSONObject>() {
                                 @Override
                                 public void onResponse(JSONObject response) {

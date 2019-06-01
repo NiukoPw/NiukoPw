@@ -57,13 +57,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("risposta", "Main");
 
         setContentView(R.layout.activity_main);
 
         SharedPreferences vSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         int vId = vSharedPref.getInt(ID_KEY, -1);
-        Log.d("risposta", "main shared id: " + vId);
         if (vId >= 0) {
             JSONObject vParameters = new JSONObject();
             try {
@@ -73,22 +71,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
-                                Log.d("risposta", "onResponse R76: " + response.toString());
+                                Log.d("risposta", "onResponse Main R76: " + response.toString());
                                 try {
-                                    JSONArray vRecords = response.getJSONArray("records");
-
-                                    for (int i = 0; i < vRecords.length(); i++) {
-                                        JSONObject vCurrent = vRecords.getJSONObject(i);
-
-                                        mUtente = new Utente(
-                                                vCurrent.getString("nome"),
-                                                vCurrent.getString("cognome"),
-                                                IMG_URL,
-                                                vCurrent.getString("username"),
-                                                vCurrent.getBoolean("amministratore"),
-                                                vCurrent.getInt("id")
-                                        );
-                                    }
+                                    mUtente = new Utente(
+                                            response.getString("nome"),
+                                            response.getString("cognome"),
+                                            IMG_URL,
+                                            response.getString("nomeUtente"),
+                                            response.getInt("amministratore"),
+                                            response.getInt("id")
+                                    );
 
                                     // metto nome utente
                                     mNomeUtente = findViewById(R.id.mainUserNameTextView);
@@ -116,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 finish();
             }
         } else {
-            Log.d("risposta", "shared vuote");
             finish();
         }
 
