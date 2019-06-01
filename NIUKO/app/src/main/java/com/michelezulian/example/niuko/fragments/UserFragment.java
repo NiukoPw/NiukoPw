@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +16,26 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.bumptech.glide.Glide;
 import com.michelezulian.example.niuko.R;
 import com.michelezulian.example.niuko.activities.LoginActivity;
+import com.michelezulian.example.niuko.activities.MainActivity;
 import com.michelezulian.example.niuko.data.Utente;
+import com.michelezulian.example.niuko.misc.ConnectionSingleton;
 import com.michelezulian.example.niuko.misc.FragmentListener;
+
+import org.json.JSONObject;
+
+import java.lang.reflect.Method;
 
 import static com.michelezulian.example.niuko.misc.StaticValues.ID_KEY;
 import static com.michelezulian.example.niuko.misc.StaticValues.PROPIC_URL;
+import static com.michelezulian.example.niuko.misc.StaticValues.URL_ORE_SVOLTE;
+import static com.michelezulian.example.niuko.misc.StaticValues.TAG;
 
 public class UserFragment extends Fragment {
     FragmentListener mListener;
@@ -47,18 +60,20 @@ public class UserFragment extends Fragment {
 
 
         mNomeUtente.setText(mUtente.getmNomeUtente());
-        //mOreSvolte.setText(mUtente.getmOreSvolte());
 
+        // immagine di sfondo
         Glide.with(this)
                 .load(PROPIC_URL)
                 .centerInside()
                 .into(mBgPic);
 
+        // immagine profilo
         Glide.with(this)
                 .load(PROPIC_URL)
                 .centerInside()
                 .into(mProPic);
 
+        // vedi i miei corsi
         mToMyCourses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +84,7 @@ public class UserFragment extends Fragment {
             }
         });
 
+        // logout
         mLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +97,39 @@ public class UserFragment extends Fragment {
                 getActivity().finish();
             }
         });
+
+        // ore di lezione
+        JSONObject vParameters = new JSONObject();
+        try {
+            vParameters.put("id", mUtente.getmId());
+            JsonObjectRequest vRequest = new JsonObjectRequest(
+                    Request.Method.POST,
+                    URL_ORE_SVOLTE,
+                    vParameters,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            try {
+                                Log.d(TAG, "onResponse: " + response.toString());
+                                mOreSvolte.setText("" + response.getInt("ore"));
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.d("risposta", "onErrorResponse: " + error.getMessage());
+                        }
+                    }
+            );
+
+            ConnectionSingleton.getInstance(getActivity()).addToRequestQueue(vRequest);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         return vView;
     }

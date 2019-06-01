@@ -25,10 +25,14 @@ router.get('/all_users', function(req, res, next) {
 });
 
 // visualizza tutti i corsi di un utente
-router.get('/corsi_utente', function(req, res, next) {
+router.post('/corsi_utente', function(req, res, next) {
+    data = {
+        $idUtente: req.body.id
+    };
     var corsi = []
-    db.each("SELECT c.titolo,c.descrizione,c.postiTotali,c.postiLiberi,c.durata,c.sede FROM corso AS c, utentecorso_rel AS ucr, utente AS u WHERE u.ID = 1 c.ID = ucr.IdCorso and ucr.IdUtente = u.ID",
-    {},
+
+    db.each("SELECT c.titolo,c.descrizione,c.postiTotali,c.postiLiberi,c.durata,c.sede,c.stato FROM corso AS c, utentecorso_rel AS ucr, utente AS u WHERE u.ID = $idUtente AND c.ID = ucr.IdCorso and ucr.IdUtente = u.ID",
+    data,
     function(err, row) {
         if (err) {
             return console.error(err);
@@ -38,7 +42,8 @@ router.get('/corsi_utente', function(req, res, next) {
             descrizione: row.descrizione,
             postiLiberi: row.postiLiberi,
             durata: row.durata,
-            sede: row.sede
+            sede: row.sede,
+            stato: row.stato
         });
     }, function(err, rows) {
         res.json({
@@ -71,10 +76,14 @@ router.get('/lezioni_utente', function(req, res, next) {
 });
 
 // visualizza le ore di lezione totali di un utente
-router.get('/orelezione_utente', function(req, res, next) {
+router.post('/orelezione_utente', function(req, res, next) {
+    data = {
+        $userId: req.body.id
+    };
     var ore = 0
-    db.each("SELECT sum(durata) as totale_ore FROM lezione as l, utentelezione_rel as ulr, utente as u WHERE u.ID = 1 and l.ID = ulr.IdLezione and ulr.IdUtente = u.ID ",
-    {},
+
+    db.each("SELECT sum(durata) as totale_ore FROM lezione as l, utentelezione_rel as ulr, utente as u WHERE u.ID = $userId and l.ID = ulr.IdLezione and ulr.IdUtente = u.ID ",
+    data,
     function(err, row) {
         if (err) {
             return console.error(err);

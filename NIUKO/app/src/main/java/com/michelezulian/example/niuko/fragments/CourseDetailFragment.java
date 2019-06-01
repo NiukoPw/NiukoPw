@@ -81,6 +81,14 @@ public class CourseDetailFragment extends Fragment {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("risposta", "onResponse: " + response.toString());
+                                    try {
+                                        if(response.getBoolean("iscrizione")) {
+                                            Toast.makeText(getActivity(), "Iscrizione avvenuta!", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } catch (Exception e) {
+                                        Log.d("risposta", "Errore: " + e.toString());
+                                        Toast.makeText(getActivity(), "Oops! C'è stato un errore", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             },
                             new Response.ErrorListener() {
