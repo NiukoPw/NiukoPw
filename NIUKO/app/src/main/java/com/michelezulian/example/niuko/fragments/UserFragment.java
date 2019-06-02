@@ -64,7 +64,6 @@ public class UserFragment extends Fragment {
         // immagine di sfondo
         Glide.with(this)
                 .load(PROPIC_URL)
-                .centerInside()
                 .into(mBgPic);
 
         // immagine profilo

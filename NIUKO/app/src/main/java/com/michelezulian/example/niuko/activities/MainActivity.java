@@ -30,6 +30,7 @@ import com.michelezulian.example.niuko.data.Utente;
 import com.michelezulian.example.niuko.fragments.CalendarFragment;
 import com.michelezulian.example.niuko.fragments.CourseDetailFragment;
 import com.michelezulian.example.niuko.fragments.ExploreFragment;
+import com.michelezulian.example.niuko.fragments.LessonCourseFragment;
 import com.michelezulian.example.niuko.fragments.NewsDetailFragment;
 import com.michelezulian.example.niuko.fragments.NewsFragment;
 import com.michelezulian.example.niuko.fragments.UserCourseDetailFragment;
@@ -115,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mIconautente = findViewById(R.id.mainUserImage);
         Glide.with(this)
                 .load(PROPIC_URL)
-                .centerInside()
                 .into(mIconautente);
 
         // creo bottom navigation bar
@@ -230,7 +230,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                         // corsi dell'utente -> utente
                         if (vFragment instanceof UserCoursesFragment) {
                             loadFragment(new UserFragment());
-                        }
+                        } else
+
+                            // corso entrando dalla lezione -> calendario
+                            if(vFragment instanceof LessonCourseFragment) {
+                                loadFragment(new CalendarFragment());
+                            }
     }
 
     @Override

@@ -73,7 +73,6 @@ public class CorsoAdapter extends BaseAdapter {
         vHolder.mDurata.setText(vCorso.getmDurata() + ORE);
         Glide.with(mContext)
                 .load(vCorso.getmImgUrl())
-                .centerInside()
                 .into(vHolder.mImmagine);
 
         return convertView;

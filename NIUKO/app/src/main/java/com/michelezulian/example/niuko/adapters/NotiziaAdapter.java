@@ -70,7 +70,6 @@ public class NotiziaAdapter extends BaseAdapter {
         vHolder.mData.setText(vNotizia.getmData());
         Glide.with(mContext)
                 .load(vNotizia.getmImgUrl())
-                .centerInside()
                 .into(vHolder.mImmagine);
 
         return convertView;

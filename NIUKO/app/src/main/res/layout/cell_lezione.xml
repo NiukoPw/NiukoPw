@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/corsoLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round_columbia"
+    android:orientation="vertical"
+    >
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/lezioneTitolo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Corso: Titolo"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/lezioneData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sede: Padova"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/lezioneDurata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sede: Padova"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/lezioneSede"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sede: Padova"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/lezioneDescrizione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Durata: 32 ore"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:fontFamily="@font/roboto" />
+</LinearLayout>
+

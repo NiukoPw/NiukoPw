@@ -21,7 +21,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
             tools:ignore="MissingConstraints"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 

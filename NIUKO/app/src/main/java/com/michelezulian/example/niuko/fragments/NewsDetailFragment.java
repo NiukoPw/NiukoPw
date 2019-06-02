@@ -36,7 +36,6 @@ public class NewsDetailFragment extends Fragment {
 
         Glide.with(getActivity())
                 .load(mNotizia.getmImgUrl())
-                .centerInside()
                 .into(vImg);
 
         vTitolo.setText(mNotizia.getmTitolo());

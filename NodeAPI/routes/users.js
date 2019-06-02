@@ -53,15 +53,20 @@ router.post('/corsi_utente', function(req, res, next) {
 });
 
 // visualizza tutte le lezioni che un utente dovrà frequentare
-router.get('/lezioni_utente', function(req, res, next) {
+router.post('/lezioni_utente', function(req, res, next) {
+    data = {
+        $userId: req.body.id
+    };
     var lezioni = []
-    db.each("SELECT c.titolo,c.descrizione,c.sede,l.data,l.durata FROM corso as c, lezione as l, utentelezione_rel as ulr, utente as u WHERE u.ID = 1 and u.ID = ulr.IdUtente AND ulr.IdLezione = l.ID AND l.IdCorso = c.ID ",
-    {},
+
+    db.each("SELECT c.titolo,c.descrizione,c.sede,l.data,l.durata,l.id FROM corso as c, lezione as l, utentelezione_rel as ulr, utente as u WHERE u.ID = $userId and u.ID = ulr.IdUtente AND ulr.IdLezione = l.ID AND l.IdCorso = c.ID ",
+    data,
     function(err, row) {
         if (err) {
             return console.error(err);
         }
         lezioni.push({
+            id: row.ID,
             titolo: row.titolo,
             descrizione: row.descrizione,
             data: row.data,

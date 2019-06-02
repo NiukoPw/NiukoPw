@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <ScrollView
-        android:id="@+id/calendarScrollView"
+    <TextView
+        android:id="@+id/calendarMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:background="@color/white"
+        android:text="mese"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        app:fontFamily="@font/roboto" />
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/calendarCalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_round_white"
+        app:compactCalendarTextSize="15dp"
+        app:compactCalendarCurrentDayBackgroundColor="@color/vermilion"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/vermilion" />
+
+    <ListView
+        android:id="@+id/calendarListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="123dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-        <CalendarView
-            android:id="@+id/calendarCalendarView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:accessibilityHeading="true"
-            android:background="@drawable/bg_round_columbia"
-            android:backgroundTint="@color/lavenderBlush"
-            />
-
-        <ListView
-            android:id="@+id/calendarListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        </LinearLayout>
-    </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
+        android:divider="@null"
+        android:layout_weight="1" />
+</LinearLayout>

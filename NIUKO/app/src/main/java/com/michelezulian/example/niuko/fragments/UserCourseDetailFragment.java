@@ -39,7 +39,6 @@ public class UserCourseDetailFragment extends Fragment {
 
         Glide.with(getActivity())
                 .load(mCorso.getmImgUrl())
-                .centerInside()
                 .into(vImg);
 
         vTitolo.setText(mCorso.getmNomeCorso());

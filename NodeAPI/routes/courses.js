@@ -46,4 +46,39 @@ router.post('/join', function(req, res, next){
   });
 });
 
+router.post('/from_lesson', function(req,res,next){
+    data = {
+        $lessonId : req.body.id
+    };
+
+    var id, titolo, sede, durata, descrizione, stato, postiLiberi;
+
+    db.get("SELECT * FROM corso WHERE ID = ( " +
+        + "SELECT idCorso FROM LEZIONE WHERE ID = $lessonId" +
+        + ")",
+    data,
+    (err, row) => {
+        if (err) {
+            return console.error(err);
+        }
+        id = row.ID;
+        titolo = row.titolo;
+        sede = row.sede;
+        durata = row.durata;
+        descrizione = row.descrizione;
+        stato = row.stato;
+        postiLiberi = row.postiLiberi;
+
+        res.json({
+            id : id,
+            titolo : titolo,
+            sede : sede,
+            durata : durata,
+            descrizione : descrizione,
+            stato : stato,
+            postiLiberi : postiLiberi
+        });
+    });
+});
+
 module.exports = router;

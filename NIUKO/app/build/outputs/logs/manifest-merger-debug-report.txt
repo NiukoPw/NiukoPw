@@ -5,6 +5,7 @@ INJECTED from C:\Users\matte\OneDrive\Desktop\progetto_niuko\NiukoPw\NIUKO\app\s
 INJECTED from C:\Users\matte\OneDrive\Desktop\progetto_niuko\NiukoPw\NIUKO\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from C:\Users\matte\OneDrive\Desktop\progetto_niuko\NiukoPw\NIUKO\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\23512718699cbe38cf4d34738966e3aa\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.sundeepk:compact-calendar-view:3.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\e44f962dd721fcf9a4b227ff7a5b5c0d\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\383b3acedd50566abf75084d22d92b0d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\5dddcb9ec6e66dfbc34e91be8553084e\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\652479d0b83a82efdcab266291cb791c\AndroidManifest.xml:2:1-12:12
@@ -132,6 +133,8 @@ INJECTED from C:\Users\matte\OneDrive\Desktop\progetto_niuko\NiukoPw\NIUKO\app\s
 INJECTED from C:\Users\matte\OneDrive\Desktop\progetto_niuko\NiukoPw\NIUKO\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:design:28.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\23512718699cbe38cf4d34738966e3aa\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\23512718699cbe38cf4d34738966e3aa\AndroidManifest.xml:20:5-44
+MERGED from [com.github.sundeepk:compact-calendar-view:3.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\e44f962dd721fcf9a4b227ff7a5b5c0d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.sundeepk:compact-calendar-view:3.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\e44f962dd721fcf9a4b227ff7a5b5c0d\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\383b3acedd50566abf75084d22d92b0d\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\383b3acedd50566abf75084d22d92b0d\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\matte\.gradle\caches\transforms-2\files-2.1\5dddcb9ec6e66dfbc34e91be8553084e\AndroidManifest.xml:5:5-7:41

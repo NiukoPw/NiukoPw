@@ -180,6 +180,21 @@ attr colorPrimaryDark
 attr colorSecondary
 attr colorSwitchThumbNormal
 attr commitIcon
+attr compactCalendarBackgroundColor
+attr compactCalendarCurrentDayBackgroundColor
+attr compactCalendarCurrentDayIndicatorStyle
+attr compactCalendarCurrentDayTextColor
+attr compactCalendarCurrentSelectedDayBackgroundColor
+attr compactCalendarCurrentSelectedDayIndicatorStyle
+attr compactCalendarCurrentSelectedDayTextColor
+attr compactCalendarDisplayOtherMonthDays
+attr compactCalendarEventIndicatorStyle
+attr compactCalendarMultiEventIndicatorColor
+attr compactCalendarOtherMonthDaysTextColor
+attr compactCalendarShouldSelectFirstDayOfMonthOnScroll
+attr compactCalendarTargetHeight
+attr compactCalendarTextColor
+attr compactCalendarTextSize
 attr constraintSet
 attr constraint_referenced_ids
 attr content
@@ -1021,7 +1036,6 @@ drawable bg_round_lavender
 drawable bg_round_white
 drawable bottom_bar_highlight
 drawable button_ripple_red
-drawable classroom
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1052,12 +1066,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable paper_plane
-drawable successful
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-drawable users
-drawable userupactionbar
 font roboto
 id ALT
 id CTRL
@@ -1099,7 +1109,7 @@ id bottom
 id buttonPanel
 id calendarCalendarView
 id calendarListView
-id calendarScrollView
+id calendarMonth
 id cancel_action
 id center
 id center_horizontal
@@ -1152,6 +1162,7 @@ id expanded_menu
 id exploreListView
 id fill
 id fill_horizontal
+id fill_large_indicator
 id fill_vertical
 id filled
 id fixed
@@ -1168,7 +1179,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id immaggine
 id info
 id invisible
 id italic
@@ -1176,6 +1186,11 @@ id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
 id left
+id lezioneData
+id lezioneDescrizione
+id lezioneDurata
+id lezioneSede
+id lezioneTitolo
 id line1
 id line3
 id linearLayout2
@@ -1204,6 +1219,7 @@ id navigation_explore
 id navigation_header_container
 id navigation_news
 id never
+id no_fill_large_indicator
 id none
 id normal
 id notification_background
@@ -1269,6 +1285,7 @@ id signupPasswordCheck
 id signupToLogin
 id signupUsername
 id smallLabel
+id small_indicator
 id snackbar_action
 id snackbar_text
 id snap
@@ -1290,7 +1307,6 @@ id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
-id testo
 id text
 id text2
 id textSpacerNoButtons
@@ -1412,7 +1428,6 @@ layout fragment_signup
 layout fragment_user
 layout fragment_user_course_detail
 layout fragment_user_courses
-layout listview_user_fragment
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -2032,6 +2047,7 @@ styleable CircleImageView civ_border_color civ_border_overlay civ_border_width c
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
+styleable CompactCalendarView compactCalendarBackgroundColor compactCalendarCurrentDayBackgroundColor compactCalendarCurrentDayIndicatorStyle compactCalendarCurrentDayTextColor compactCalendarCurrentSelectedDayBackgroundColor compactCalendarCurrentSelectedDayIndicatorStyle compactCalendarCurrentSelectedDayTextColor compactCalendarDisplayOtherMonthDays compactCalendarEventIndicatorStyle compactCalendarMultiEventIndicatorColor compactCalendarOtherMonthDaysTextColor compactCalendarShouldSelectFirstDayOfMonthOnScroll compactCalendarTargetHeight compactCalendarTextColor compactCalendarTextSize
 styleable CompoundButton android_button buttonTint buttonTintMode
 styleable ConstraintLayout_Layout android_orientation android_maxWidth android_maxHeight android_minWidth android_minHeight barrierAllowsGoneWidgets barrierDirection chainUseRtl constraintSet constraint_referenced_ids layout_constrainedHeight layout_constrainedWidth layout_constraintBaseline_creator layout_constraintBaseline_toBaselineOf layout_constraintBottom_creator layout_constraintBottom_toBottomOf layout_constraintBottom_toTopOf layout_constraintCircle layout_constraintCircleAngle layout_constraintCircleRadius layout_constraintDimensionRatio layout_constraintEnd_toEndOf layout_constraintEnd_toStartOf layout_constraintGuide_begin layout_constraintGuide_end layout_constraintGuide_percent layout_constraintHeight_default layout_constraintHeight_max layout_constraintHeight_min layout_constraintHeight_percent layout_constraintHorizontal_bias layout_constraintHorizontal_chainStyle layout_constraintHorizontal_weight layout_constraintLeft_creator layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_creator layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintTop_creator layout_constraintTop_toBottomOf layout_constraintTop_toTopOf layout_constraintVertical_bias layout_constraintVertical_chainStyle layout_constraintVertical_weight layout_constraintWidth_default layout_constraintWidth_max layout_constraintWidth_min layout_constraintWidth_percent layout_editor_absoluteX layout_editor_absoluteY layout_goneMarginBottom layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginRight layout_goneMarginStart layout_goneMarginTop layout_optimizationLevel
 styleable ConstraintLayout_placeholder content emptyVisibility
